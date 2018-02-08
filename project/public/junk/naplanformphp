@@ -1,0 +1,27 @@
+<form action="naplan.php" name="naplan_details" method="get">
+    <fieldset>
+        <h3>Heading goes here</h3>
+            <div id="radio" class="form-group">
+                <label><input type="radio" name="grade" value="naplan_year3" checked>Year 3</label>
+                <label><input type="radio" name="grade" value="naplan_year5">Year 5</label>
+            </div>
+            <div class="form-group">
+                <select name="year" id="year_list">
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+    </fieldset>
+</form>
+
+<div>
+    <a href="index.html">Click</a> to go home
+</div>

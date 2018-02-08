@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+    // configuration
+    require("../includes/config.php"); 
+    
+    $filename = $argv[1];
+    $counter = 0;
+    
+    if (is_readable($filename))
+    {
+        $handle = fopen("locality_centroids.txt", "r");
+        while (!feof($handle))
+        {
+            $data = fgetcsv($handle, 0, ",");
+            if($data['0'] != NULL)
+            {
+                $insert = query("INSERT INTO places (place_name, latitude, longitude)
+                             VALUES (?, ?, ?)", $data['0'], 
+                            $data['2'], $data['1']);
+                $counter++;
+            }
+        }
+        echo("The number of records inserted was $counter\n");
+        fclose($handle);
+    }
+    else
+    {
+        echo("File not found/readable\n");
+    }
+    
+
+?>

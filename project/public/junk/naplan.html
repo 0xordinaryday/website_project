@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+<html lang="en">
+    <head>
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/css/bootstrap-theme.min.css" rel="stylesheet"/>
+        
+        <!-- http://www.kryogenix.org/code/browser/sorttable/ -->
+        <script src="/js/sorttable.js"></script>
+        
+        <!-- http://tablesorter.com/docs/ -->
+        <script src="/js/tablesorter.js"></script>
+
+        <!-- app's own CSS -->
+        <link href="/css/styles.css" rel="stylesheet"/>
+        
+        <!-- app's own JavaScript -->
+        <script src="/js/scripts.js"></script>
+        
+        <!-- http://jquery.com/ -->
+        <script src="/js/jquery-1.11.1.min.js"></script>
+
+        <title>Launcestonian</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1>Launcestonian</h1> 
+                <p>The Launceston Data Project</p>
+            </div>
+            <div>
+                <h4 class=lightblue>Year 3 Naplan Data for 2014</h4>
+            </div>
+
+            <!-- <div class="naplan">
+
+                <table id="year3" class="sortable">
+
+                <thead>
+                    <tr><th>School Name</th><th>ICSEA</th><th># of Girls</th><th># of Boys</th><th>Year 3 Reading</th><th>Year 3 Writing</th><th>Year 3 Spelling</th><th>Year 3 Grammar</th><th>Year 3 Numeracy</th><th>Year 3 Total</th><th>Year 3 Average</th><th>Index* See Note</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Invermay Primary</td><td>963</td><td>138</td><td>153</td><td>478</td><td>450</td><td>453</td><td>463</td><td>452</td><td>2296</td><td>459.2</td><td>0.4194</td></tr>
+                    <tr><td>John Calvin School</td><td>1032</td><td>39</td><td>33</td><td>484</td><td>409</td><td>452</td><td>475</td><td>453</td><td>2273</td><td>454.6</td><td>0.4540</td></tr>
+                    <tr><td>East Launceston Primary</td><td>1063</td><td>302</td><td>303</td><td>486</td><td>432</td><td>453</td><td>473</td><td>454</td><td>2298</td><td>459.6</td><td>0.4626</td></tr>
+                    <tr><td>Glen Dhu Primary</td><td>997</td><td>146</td><td>190</td><td>460</td><td>446</td><td>449</td><td>461</td><td>403</td><td>2219</td><td>443.8</td><td>0.4493</td></tr>
+                    <tr><td>Oakwood School Norwood</td><td>994</td><td>85</td><td>101</td><td>449</td><td>424</td><td>433</td><td>462</td><td>437</td><td>2205</td><td>441.0</td><td>0.4508</td></tr>
+                    <tr><td>Mowbray Heights Primary</td><td>918</td><td>232</td><td>252</td><td>392</td><td>400</td><td>390</td><td>380</td><td>352</td><td>1914</td><td>382.8</td><td>0.4796</td></tr>
+                    <tr><td>Summerdale Primary</td><td>957</td><td>263</td><td>266</td><td>413</td><td>408</td><td>406</td><td>397</td><td>401</td><td>2025</td><td>405.0</td><td>0.4726</td></tr>
+                    <tr><td>Youngtown Primary</td><td>982</td><td>168</td><td>179</td><td>449</td><td>415</td><td>425</td><td>444</td><td>422</td><td>2155</td><td>431.0</td><td>0.4557</td></tr>
+                    <tr><td>St Leonards Primary</td><td>948</td><td>127</td><td>123</td><td>404</td><td>393</td><td>393</td><td>411</td><td>390</td><td>1991</td><td>398.2</td><td>0.4761</td></tr>
+                    <tr><td>Sacred Heart Primary</td><td>1060</td><td>199</td><td>200</td><td>447</td><td>440</td><td>441</td><td>452</td><td>444</td><td>2224</td><td>444.8</td><td>0.4766</td></tr>
+                    <tr><td>Riverside Primary</td><td>1014</td><td>328</td><td>345</td><td>427</td><td>422</td><td>393</td><td>422</td><td>423</td><td>2087</td><td>417.4</td><td>0.4859</td></tr>
+                    <tr><td>West Launceston Primary</td><td>1018</td><td>166</td><td>196</td><td>430</td><td>418</td><td>418</td><td>429</td><td>415</td><td>2110</td><td>422.0</td><td>0.4825</td></tr>
+                    <tr><td>St Finn Barr's Catholic Primary</td><td>1004</td><td>153</td><td>132</td><td>447</td><td>384</td><td>423</td><td>421</td><td>406</td><td>2081</td><td>416.2</td><td>0.4825</td></tr>
+                    <tr><td>Ravenswood Heights Primary</td><td>850</td><td>141</td><td>159</td><td>349</td><td>346</td><td>338</td><td>317</td><td>352</td><td>1702</td><td>340.4</td><td>0.4994</td></tr>
+                    <tr><td>East Tamar Primary</td><td>883</td><td>174</td><td>172</td><td>382</td><td>358</td><td>352</td><td>368</td><td>345</td><td>1805</td><td>361.0</td><td>0.4892</td></tr>
+                    <tr><td>Trevallyn Primary</td><td>1068</td><td>244</td><td>238</td><td>468</td><td>438</td><td>434</td><td>447</td><td>442</td><td>2229</td><td>445.8</td><td>0.4791</td></tr>
+                    <tr><td>Norwood Primary</td><td>997</td><td>212</td><td>255</td><td>401</td><td>381</td><td>376</td><td>395</td><td>397</td><td>1950</td><td>390.0</td><td>0.5113</td></tr>
+                    <tr><td>Punchbowl Primary</td><td>1016</td><td>158</td><td>169</td><td>426</td><td>414</td><td>406</td><td>442</td><td>418</td><td>2106</td><td>421.2</td><td>0.4824</td></tr>
+                    <tr><td>Larmenier Catholic School</td><td>1011</td><td>100</td><td>82</td><td>410</td><td>400</td><td>406</td><td>418</td><td>389</td><td>2023</td><td>404.6</td><td>0.4998</td></tr>
+                    <tr><td>The Launceston Preparatory School</td><td>1117</td><td>56</td><td>59</td><td>474</td><td>416</td><td>404</td><td>458</td><td>442</td><td>2194</td><td>438.8</td><td>0.5091</td></tr>
+                    <tr><td>Launceston Christian School</td><td>1049</td><td>294</td><td>297</td><td>432</td><td>419</td><td>410</td><td>436</td><td>428</td><td>2125</td><td>425.0</td><td>0.4936</td></tr>
+                    <tr><td>St Thomas More's Catholic School</td><td>1049</td><td>147</td><td>129</td><td>438</td><td>401</td><td>416</td><td>433</td><td>394</td><td>2082</td><td>416.4</td><td>0.5038</td></tr>
+                    <tr><td>Scotch Oakburn Primary Campus</td><td>1131</td><td>520</td><td>488</td><td>467</td><td>445</td><td>440</td><td>466</td><td>453</td><td>2271</td><td>454.2</td><td>0.4980</td></tr>
+                    <tr><td>Waverley Primary</td><td>901</td><td>79</td><td>74</td><td>353</td><td>334</td><td>337</td><td>334</td><td>358</td><td>1716</td><td>343.2</td><td>0.5251</td></tr>
+                    <tr><td>St Anthony's Catholic School</td><td>1045</td><td>78</td><td>102</td><td>439</td><td>413</td><td>403</td><td>442</td><td>396</td><td>2093</td><td>418.6</td><td>0.4993</td></tr>
+                    <tr><td>LC Grammar Primary Campus</td><td>1120</td><td>349</td><td>348</td><td>453</td><td>419</td><td>409</td><td>438</td><td>445</td><td>2164</td><td>432.8</td><td>0.5176</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td>NATIONAL AVERAGES</td><td>1000</td><td></td><td></td><td>418</td><td>402</td><td>412</td><td>426</td><td>402</td><td>2060</td><td>412.0</td><td>0.4854</td></tr>
+                </tfoot>
+                </table>
+            </div>
+      
+            <div>
+                <h4 class=lightblue>Year 5 Naplan Data for 2014</h4>
+            </div>
+
+            <div class="naplan">
+                
+                <table id="year5" class="sortable">
+                
+                <thead>
+                    <tr><th>School Name</th><th>ICSEA</th><th># of Girls</th><th># of Boys</th><th>Year 5 Reading</th><th>Year 5 Writing</th><th>Year 5 Spelling</th><th>Year 5 Grammar</th><th>Year 5 Numeracy</th><th>Year 5 Total</th><th>Year 5 Average</th><th>Index* See Note</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Invermay Primary</td><td>963</td><td>138</td><td>153</td><td>467</td><td>480</td><td>466</td><td>485</td><td>452</td><td>2350</td><td>470.0</td><td>0.4098</td></tr>
+                    <tr><td>John Calvin School</td><td>1032</td><td>39</td><td>33</td><td>542</td><td>472</td><td>547</td><td>567</td><td>557</td><td>2685</td><td>537.0</td><td>0.3844</td></tr>
+                    <tr><td>East Launceston Primary</td><td>1063</td><td>302</td><td>303</td><td>517</td><td>469</td><td>504</td><td>521</td><td>495</td><td>2506</td><td>501.2</td><td>0.4242</td></tr>
+                    <tr><td>Glen Dhu Primary</td><td>997</td><td>146</td><td>190</td><td>521</td><td>485</td><td>522</td><td>522</td><td>500</td><td>2550</td><td>510.0</td><td>0.3910</td></tr>
+                    <tr><td>Oakwood School Norwood</td><td>994</td><td>85</td><td>101</td><td>513</td><td>472</td><td>499</td><td>528</td><td>508</td><td>2520</td><td>504.0</td><td>0.3944</td></tr>
+                    <tr><td>Mowbray Heights Primary</td><td>918</td><td>232</td><td>252</td><td>471</td><td>465</td><td>479</td><td>480</td><td>466</td><td>2361</td><td>472.2</td><td>0.3888</td></tr>
+                    <tr><td>Summerdale Primary</td><td>957</td><td>263</td><td>266</td><td>483</td><td>480</td><td>479</td><td>497</td><td>485</td><td>2424</td><td>484.8</td><td>0.3948</td></tr>
+                    <tr><td>Youngtown Primary</td><td>982</td><td>168</td><td>179</td><td>477</td><td>433</td><td>473</td><td>466</td><td>483</td><td>2332</td><td>466.4</td><td>0.4211</td></tr>
+                    <tr><td>St Leonards Primary</td><td>948</td><td>127</td><td>123</td><td>466</td><td>464</td><td>479</td><td>461</td><td>460</td><td>2330</td><td>466.0</td><td>0.4069</td></tr>
+                    <tr><td>Sacred Heart Primary</td><td>1060</td><td>199</td><td>200</td><td>534</td><td>502</td><td>517</td><td>523</td><td>507</td><td>2583</td><td>516.6</td><td>0.4104</td></tr>
+                    <tr><td>Riverside Primary</td><td>1014</td><td>328</td><td>345</td><td>513</td><td>491</td><td>499</td><td>515</td><td>486</td><td>2504</td><td>500.8</td><td>0.4050</td></tr>
+                    <tr><td>West Launceston Primary</td><td>1018</td><td>166</td><td>196</td><td>499</td><td>474</td><td>499</td><td>491</td><td>504</td><td>2467</td><td>493.4</td><td>0.4126</td></tr>
+                    <tr><td>St Finn Barr's Catholic Primary</td><td>1004</td><td>153</td><td>132</td><td>506</td><td>473</td><td>491</td><td>486</td><td>470</td><td>2426</td><td>485.2</td><td>0.4138</td></tr>
+                    <tr><td>Ravenswood Heights Primary</td><td>850</td><td>141</td><td>159</td><td>427</td><td>422</td><td>425</td><td>411</td><td>427</td><td>2112</td><td>422.4</td><td>0.4025</td></tr>
+                    <tr><td>East Tamar Primary</td><td>883</td><td>174</td><td>172</td><td>448</td><td>408</td><td>446</td><td>412</td><td>429</td><td>2143</td><td>428.6</td><td>0.4120</td></tr>
+                    <tr><td>Trevallyn Primary</td><td>1068</td><td>244</td><td>238</td><td>522</td><td>472</td><td>500</td><td>515</td><td>505</td><td>2514</td><td>502.8</td><td>0.4248</td></tr>
+                    <tr><td>Norwood Primary</td><td>997</td><td>212</td><td>255</td><td>507</td><td>481</td><td>495</td><td>503</td><td>484</td><td>2470</td><td>494.0</td><td>0.4036</td></tr>
+                    <tr><td>Punchbowl Primary</td><td>1016</td><td>158</td><td>169</td><td>490</td><td>464</td><td>480</td><td>485</td><td>473</td><td>2392</td><td>478.4</td><td>0.4247</td></tr>
+                    <tr><td>Larmenier Catholic School</td><td>1011</td><td>100</td><td>82</td><td>502</td><td>456</td><td>488</td><td>520</td><td>485</td><td>2451</td><td>490.2</td><td>0.4125</td></tr>
+                    <tr><td>The Launceston Preparatory School</td><td>1117</td><td>56</td><td>59</td><td>584</td><td>510</td><td>537</td><td>571</td><td>539</td><td>2741</td><td>548.2</td><td>0.4075</td></tr>
+                    <tr><td>Launceston Christian School</td><td>1049</td><td>294</td><td>297</td><td>529</td><td>451</td><td>499</td><td>522</td><td>493</td><td>2494</td><td>498.8</td><td>0.4206</td></tr>
+                    <tr><td>St Thomas More's Catholic School</td><td>1049</td><td>147</td><td>129</td><td>516</td><td>487</td><td>517</td><td>518</td><td>494</td><td>2532</td><td>506.4</td><td>0.4143</td></tr>
+                    <tr><td>Scotch Oakburn Primary Campus</td><td>1131</td><td>520</td><td>488</td><td>563</td><td>503</td><td>527</td><td>543</td><td>535</td><td>2671</td><td>534.2</td><td>0.4234</td></tr>
+                    <tr><td>Waverley Primary</td><td>901</td><td>79</td><td>74</td><td>458</td><td>426</td><td>450</td><td>434</td><td>445</td><td>2213</td><td>442.6</td><td>0.4071</td></tr>
+                    <tr><td>St Anthony's Catholic School</td><td>1045</td><td>78</td><td>102</td><td>506</td><td>438</td><td>501</td><td>486</td><td>502</td><td>2433</td><td>486.6</td><td>0.4295</td></tr>
+                    <tr><td>LC Grammar Primary Campus</td><td>1120</td><td>349</td><td>348</td><td>559</td><td>507</td><td>528</td><td>547</td><td>531</td><td>2672</td><td>534.4</td><td>0.4192</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td>NATIONAL AVERAGES</td><td>1000</td><td></td><td></td><td>501</td><td>468</td><td>498</td><td>504</td><td>488</td><td>2459</td><td>491.8</td><td>0.4067</td></tr>
+                </tfoot>
+                </table>
+            </div> -->
+
+            <div>
+                <p>"Placeholder"</p>
+            </div>
+            
+            <div class="naplan">
+                
+                <table id="test" class="sortable">
+                
+                <thead>
+                    <tr><th>FUCK YEAH</th><th>Year</th><th>Reading</th><th>Writing</th><th>Spelling</th><th>Grammar</th><th>Numeracy</th><th>Total</th><th>ICSEA</th></tr>
+                </thead>
+                <tbody>
+                <script>
+                
+                $.getJSON("naplan.php")
+                .done(function(data, textStatus, jqXHR) 
+                {
+                
+                console.log(data);
+
+                for (var i = 0; i < data.length; i++) 
+                {
+                    tr = $('<tr>');
+                    var total = parseInt(data[i].reading) + parseInt(data[i].writing) + 
+                                parseInt(data[i].spelling) + parseInt(data[i].grammar) + 
+                                parseInt(data[i].numeracy);
+                    tr.append("<td>" + data[i].school_name + "</td>");
+                    tr.append("<td>" + data[i].year + "</td>");
+                    tr.append("<td>" + data[i].reading + "</td>");
+                    tr.append("<td>" + data[i].writing + "</td>");
+                    tr.append("<td>" + data[i].spelling + "</td>");
+                    tr.append("<td>" + data[i].grammar + "</td>");
+                    tr.append("<td>" + data[i].numeracy + "</td>");
+                    tr.append("<td>" + total + "</td>");
+                    tr.append("<td>" + data[i].icsea + "</td>");
+                    tr.append("</tr>");
+                    $('#test').append(tr);
+                }
+                })
+                
+                .fail(function(jqXHR, textStatus, errorThrown) 
+                {
+                    // log error to browser's console
+                    console.log(errorThrown.toString());
+                });
+                
+                </script>
+                </tbody>
+                <tfoot>
+                    <tr><td>NATIONAL AVERAGES</td><td>1000</td><td></td><td></td><td>501</td><td>468</td><td>498</td><td>504</td><td>488</td><td>2459</td><td>491.8</td><td>0.4067</td></tr>
+                </tfoot>
+                </table>
+    
+        </div>
+    </body>
+</html>
+

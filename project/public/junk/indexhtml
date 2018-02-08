@@ -1,0 +1,79 @@
+<!--
+
+index.html
+
+Computer Science 50
+
+Final project for CS50
+David Gibbons
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+<html lang="en">
+    <head>
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/css/bootstrap-theme.min.css" rel="stylesheet"/>
+
+        <!-- app's own CSS -->
+        <link href="/css/styles.css" rel="stylesheet"/>
+
+        <title>Launcestonian</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+
+        <!-- fill viewport -->
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1>Launcestonian</h1> 
+                <p>The Launceston Data Project</p>
+                <a href="./map.html" class="btn btn-info btn-lg" style="color:yellow">
+                <span class="glyphicon glyphicon-map-marker" ></span> Map
+                </a>
+                <a href="./naplan.html" class="btn btn-info btn-lg" style="color:yellow">
+                <span class="glyphicon glyphicon-book" ></span> Naplan
+                </a>
+                <a href="./about.html" class="btn btn-info btn-lg" style="color:light-grey">
+                <span class="glyphicon glyphicon-info-sign" ></span> About
+                </a>
+            </div>
+        
+        <h1>Launcestonian</h1> 
+            <p>This page will grow as we add more and more components from Bootstrap...</p> 
+            <p>This is another paragraph.</p> 
+            <p>This is a paragraph.</p> 
+            <p>This is another paragraph.</p>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1>My first Bootstrap website!</h1> 
+  <p>This page will grow as we add more and more components from Bootstrap...</p> 
+  <p>This is another paragraph.</p> 
+  <p>This is a paragraph.</p> 
+  <p>This is another paragraph.</p>
+</div>
+
